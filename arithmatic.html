@@ -1,0 +1,28 @@
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question("Enter first number: ", (num1) => {
+  rl.question("Enter second number: ", (num2) => {
+
+    // Convert string to number
+    num1 = Number(num1);
+    num2 = Number(num2);
+
+    const sum = num1 + num2;
+    const difference = num1 - num2;
+    const product = num1 * num2;
+    const quotient = num1 / num2;
+
+
+    console.log("Sum is: " + sum);
+    console.log("Difference is: " + difference);
+    console.log("Product is: " + product);
+    console.log("Quotient is: " + quotient);
+
+    rl.close();
+  });
+});
