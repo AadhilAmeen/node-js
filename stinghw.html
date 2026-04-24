@@ -1,0 +1,49 @@
+let fullName = "  Sarah Johnson  ";
+let welcomeMsg = "   Welcome to the new platform! Hope you enjoy your experience.   ";
+
+let user = {
+    fullName: fullName,
+    welcomeMsg: welcomeMsg,
+
+    displayDetails: function () {
+
+        // Trimmed values (for clean operations)
+        let cleanName = this.fullName.trim();
+        let cleanMsg = this.welcomeMsg.trim();
+
+        // 1. First character of full name
+        console.log("First character of name:", cleanName.charAt(0));
+
+        // 2. Total number of characters in welcome message
+        console.log("Total characters in message:", cleanMsg.length);
+
+        // 3. First 15 characters using slice()
+        console.log("First 15 chars (slice):", cleanMsg.slice(0, 15));
+
+        // 4. First 15 characters using substring()
+        console.log("First 15 chars (substring):", cleanMsg.substring(0, 15));
+
+        // 5. Full name in uppercase
+        console.log("Uppercase Name:", cleanName.toUpperCase());
+
+        // 6. Welcome message in lowercase
+        console.log("Lowercase Message:", cleanMsg.toLowerCase());
+
+        // 7. Trimmed message
+        console.log("Trimmed Message:", cleanMsg);
+
+        // 8. Split full name into array
+        let nameArray = cleanName.split(" ");
+        console.log("Name split into array:", nameArray);
+
+        // 9. Find position of "welcome" (case-insensitive)
+        let position = cleanMsg.toLowerCase().indexOf("welcome");
+        console.log("Position of 'welcome':", position);
+
+        // 10. Combine full name and message
+        let combined = `${cleanName} - ${cleanMsg}`;
+        console.log("Combined String:", combined);
+    }
+};
+
+user.displayDetails();
