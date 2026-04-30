@@ -1,0 +1,15 @@
+let userName = "Alex";
+let initialBalance = 1000;
+let amountAdded = 500;
+let amountSpent = 700;
+function updateWallet(name, balance, added, spent) {
+    if (name === "guest") {
+        return "Access Denied";
+    } else {
+        return balance + added - spent;
+    }
+}
+let finalBalance = updateWallet(userName, initialBalance, amountAdded, amountSpent);
+console.log("Final Balance:", finalBalance);
+console.log("Is balance > 0?", finalBalance > 0);
+console.log("Type:", typeof finalBalance);
