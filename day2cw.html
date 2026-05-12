@@ -1,0 +1,14 @@
+let customerName = "Aniesh";
+let reviewComment = "The coffee was amazing and the service was excellent!";
+
+let review = {
+    name: customerName,
+    comment: reviewComment
+};
+function printReview(reviewObj) {
+    let upperName = reviewObj.name.toUpperCase();
+    let shortComment = reviewObj.comment.slice(0, 20);
+    console.log("Thank you, " + upperName + "!");
+    console.log("Your review: " + shortComment + "...");
+}
+printReview(review);
