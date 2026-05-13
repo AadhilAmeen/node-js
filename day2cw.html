@@ -1,14 +1,23 @@
-let customerName = "Aniesh";
-let reviewComment = "The coffee was amazing and the service was excellent!";
+// Store customer details
+const customerName = "Riya";
+const customerComment = "The coffee was amazing and the service was excellent!";
 
-let review = {
+// Create review object
+const review = {
     name: customerName,
-    comment: reviewComment
+    comment: customerComment
 };
-function printReview(reviewObj) {
-    let upperName = reviewObj.name.toUpperCase();
-    let shortComment = reviewObj.comment.slice(0, 20);
-    console.log("Thank you, " + upperName + "!");
-    console.log("Your review: " + shortComment + "...");
+
+// Function to display thank-you message
+function showReview(reviewObj) {
+
+    // Convert name to uppercase
+    const upperName = reviewObj.name.toUpperCase();
+
+    // Get first 20 characters of comment
+    const shortComment = reviewObj.comment.substring(0, 20);
+    console.log(`Thank you, ${upperName}!`);
+    console.log(`Your review: "${shortComment}..."`);
 }
-printReview(review);
+
+showReview(review);

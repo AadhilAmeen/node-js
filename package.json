@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "db": "^6.0.3",
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
     "formidable": "^3.5.4",
     "mongo": "^0.1.0",
     "mongodb": "^7.2.0",
